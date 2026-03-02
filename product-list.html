@@ -10,145 +10,39 @@
   <div class="container">
     <h1 class="page-title">Danh sách sản phẩm</h1>
 
-    <!-- Danh sách sản phẩm -->
-    <div class="product-grid" id="productGrid">
-
-      <!-- Sản phẩm 1 -->
-      <div class="product-card">
-        <div class="product-card__image">
-          <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/i/p/iphone-16-pro-max.png" alt="iPhone 16 Pro Max">
-          <span class="product-card__badge">Mới</span>
-        </div>
-        <div class="product-card__info">
-          <h3 class="product-card__name">iPhone 16 Pro Max 256GB</h3>
-          <p class="product-card__desc">Chip A18 Pro, Camera 48MP, Màn hình 6.9 inch Super Retina XDR</p>
-          <div class="product-card__price">
-            <span class="product-card__price--current">34.990.000₫</span>
-            <span class="product-card__price--old">36.990.000₫</span>
-          </div>
-          <button class="product-card__btn">Thêm vào giỏ hàng</button>
-        </div>
+    <!-- Thanh tìm kiếm và lọc -->
+    <div class="toolbar">
+      <div class="toolbar__search">
+        <input
+          type="text"
+          id="searchInput"
+          class="toolbar__search-input"
+          placeholder="Tìm kiếm sản phẩm..."
+        >
       </div>
 
-      <!-- Sản phẩm 2 -->
-      <div class="product-card">
-        <div class="product-card__image">
-          <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/s/a/samsung-galaxy-s24-ultra.png" alt="Samsung Galaxy S24 Ultra">
-          <span class="product-card__badge product-card__badge--hot">Hot</span>
-        </div>
-        <div class="product-card__info">
-          <h3 class="product-card__name">Samsung Galaxy S24 Ultra 256GB</h3>
-          <p class="product-card__desc">Chip Snapdragon 8 Gen 3, Camera 200MP, S Pen tích hợp</p>
-          <div class="product-card__price">
-            <span class="product-card__price--current">28.990.000₫</span>
-            <span class="product-card__price--old">31.990.000₫</span>
-          </div>
-          <button class="product-card__btn">Thêm vào giỏ hàng</button>
-        </div>
+      <div class="toolbar__filters">
+        <button class="filter-btn filter-btn--active" data-category="all">Tất cả</button>
+        <button class="filter-btn" data-category="dien-thoai">Điện thoại</button>
+        <button class="filter-btn" data-category="laptop">Laptop</button>
+        <button class="filter-btn" data-category="tablet">Tablet</button>
+        <button class="filter-btn" data-category="phu-kien">Phụ kiện</button>
       </div>
 
-      <!-- Sản phẩm 3 -->
-      <div class="product-card">
-        <div class="product-card__image">
-          <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/t/e/text_ng_n_11__3_32.png" alt="MacBook Air M3">
-        </div>
-        <div class="product-card__info">
-          <h3 class="product-card__name">MacBook Air M3 15 inch</h3>
-          <p class="product-card__desc">Chip Apple M3, RAM 16GB, SSD 512GB, Màn hình Liquid Retina</p>
-          <div class="product-card__price">
-            <span class="product-card__price--current">32.990.000₫</span>
-            <span class="product-card__price--old">34.990.000₫</span>
-          </div>
-          <button class="product-card__btn">Thêm vào giỏ hàng</button>
-        </div>
+      <div class="toolbar__sort">
+        <select id="sortSelect" class="toolbar__sort-select">
+          <option value="default">Sắp xếp</option>
+          <option value="price-asc">Giá tăng dần</option>
+          <option value="price-desc">Giá giảm dần</option>
+          <option value="name-asc">Tên A → Z</option>
+        </select>
       </div>
-
-      <!-- Sản phẩm 4 -->
-      <div class="product-card">
-        <div class="product-card__image">
-          <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/d/e/dell-xps-13-9345-1.png" alt="Dell XPS 13">
-          <span class="product-card__badge product-card__badge--sale">-15%</span>
-        </div>
-        <div class="product-card__info">
-          <h3 class="product-card__name">Dell XPS 13 9345</h3>
-          <p class="product-card__desc">Intel Core Ultra 7, RAM 16GB, SSD 512GB, Màn hình 13.4 inch OLED</p>
-          <div class="product-card__price">
-            <span class="product-card__price--current">27.490.000₫</span>
-            <span class="product-card__price--old">32.490.000₫</span>
-          </div>
-          <button class="product-card__btn">Thêm vào giỏ hàng</button>
-        </div>
-      </div>
-
-      <!-- Sản phẩm 5 -->
-      <div class="product-card">
-        <div class="product-card__image">
-          <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/x/i/xiaomi-14t-pro.png" alt="Xiaomi 14T Pro">
-        </div>
-        <div class="product-card__info">
-          <h3 class="product-card__name">Xiaomi 14T Pro 512GB</h3>
-          <p class="product-card__desc">Chip Dimensity 9300+, Camera Leica 50MP, Sạc nhanh 120W</p>
-          <div class="product-card__price">
-            <span class="product-card__price--current">15.990.000₫</span>
-            <span class="product-card__price--old">17.490.000₫</span>
-          </div>
-          <button class="product-card__btn">Thêm vào giỏ hàng</button>
-        </div>
-      </div>
-
-      <!-- Sản phẩm 6 -->
-      <div class="product-card">
-        <div class="product-card__image">
-          <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/i/p/ipad-pro-m4-11-inch.png" alt="iPad Pro M4">
-          <span class="product-card__badge">Mới</span>
-        </div>
-        <div class="product-card__info">
-          <h3 class="product-card__name">iPad Pro M4 11 inch 256GB</h3>
-          <p class="product-card__desc">Chip Apple M4, Màn hình Ultra Retina XDR, Apple Pencil Pro</p>
-          <div class="product-card__price">
-            <span class="product-card__price--current">28.990.000₫</span>
-            <span class="product-card__price--old">30.990.000₫</span>
-          </div>
-          <button class="product-card__btn">Thêm vào giỏ hàng</button>
-        </div>
-      </div>
-
-      <!-- Sản phẩm 7 -->
-      <div class="product-card">
-        <div class="product-card__image">
-          <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/h/e/headphone-airpods-4-anc.png" alt="AirPods 4 ANC">
-          <span class="product-card__badge product-card__badge--hot">Hot</span>
-        </div>
-        <div class="product-card__info">
-          <h3 class="product-card__name">Apple AirPods 4 với ANC</h3>
-          <p class="product-card__desc">Chống ồn chủ động, Chip H2, Âm thanh không gian, USB-C</p>
-          <div class="product-card__price">
-            <span class="product-card__price--current">4.490.000₫</span>
-            <span class="product-card__price--old">4.990.000₫</span>
-          </div>
-          <button class="product-card__btn">Thêm vào giỏ hàng</button>
-        </div>
-      </div>
-
-      <!-- Sản phẩm 8 -->
-      <div class="product-card">
-        <div class="product-card__image">
-          <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/d/e/dell-g16-7630.png" alt="Dell Gaming G16">
-          <span class="product-card__badge product-card__badge--sale">-20%</span>
-        </div>
-        <div class="product-card__info">
-          <h3 class="product-card__name">Dell Gaming G16 7630</h3>
-          <p class="product-card__desc">Intel Core i7-13650HX, RTX 4060, RAM 16GB, SSD 512GB</p>
-          <div class="product-card__price">
-            <span class="product-card__price--current">25.990.000₫</span>
-            <span class="product-card__price--old">32.490.000₫</span>
-          </div>
-          <button class="product-card__btn">Thêm vào giỏ hàng</button>
-        </div>
-      </div>
-
     </div>
+
+    <!-- Danh sách sản phẩm (render bằng JS) -->
+    <div class="product-grid" id="productGrid"></div>
   </div>
 
+  <script src="js/product-list.js"></script>
 </body>
 </html>
