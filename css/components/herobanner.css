@@ -1,6 +1,6 @@
 .herobanner {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: #fff;
+    background: linear-gradient(135deg, var(--primary-color-1) 0%, var(--primary-color-2) 100%);
+    color: var(--text-color-light);
     padding: 100px 20px;
     text-align: center;
     min-height: 400px;
@@ -27,8 +27,8 @@
 }
 
 .cta-button {
-    background-color: #ff6b6b;
-    color: #fff;
+    background-color: var(--accent-color);
+    color: var(--text-color-light);
     border: none;
     padding: 15px 40px;
     font-size: 1.1em;
@@ -40,7 +40,7 @@
 }
 
 .cta-button:hover {
-    background-color: #ff5252;
+    background-color: var(--accent-color-hover);
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
