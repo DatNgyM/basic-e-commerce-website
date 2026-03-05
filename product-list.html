@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TechStore - Đồ Công Nghệ Chính Hãng</title>
+  <title>Danh sách sản phẩm - TechStore</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components/header.css">
+  <link rel="stylesheet" href="css/product-list.css">
 </head>
 <body>
   <!-- Header -->
@@ -63,28 +64,13 @@
       <div class="container">
         <ul class="nav__list">
           <li class="nav__item">
-            <a href="index.html" class="nav__link nav__link--active">Trang chủ</a>
-          </li>
-          <li class="nav__item nav__item--dropdown">
-            <a href="#laptop" class="nav__link">Laptop</a>
-            <ul class="nav__dropdown">
-              <li><a href="#laptop-gaming">Laptop Gaming</a></li>
-              <li><a href="#laptop-van-phong">Laptop Văn phòng</a></li>
-              <li><a href="#laptop-do-hoa">Laptop Đồ họa</a></li>
-            </ul>
-          </li>
-          <li class="nav__item nav__item--dropdown">
-            <a href="#dien-thoai" class="nav__link">Điện thoại</a>
-            <ul class="nav__dropdown">
-              <li><a href="#smartphone">Smartphone</a></li>
-              <li><a href="#phu-kien-dt">Phụ kiện điện thoại</a></li>
-            </ul>
+            <a href="index.html" class="nav__link">Trang chủ</a>
           </li>
           <li class="nav__item">
-            <a href="#phu-kien" class="nav__link">Phụ kiện</a>
+            <a href="product-list.html" class="nav__link nav__link--active">Sản phẩm</a>
           </li>
           <li class="nav__item">
-            <a href="#tin-tuc" class="nav__link">Tin tức</a>
+            <a href="product-detail.html" class="nav__link">Chi tiết sản phẩm</a>
           </li>
           <li class="nav__item">
             <a href="#lien-he" class="nav__link">Liên hệ</a>
@@ -96,11 +82,44 @@
 
   <main class="main">
     <div class="container">
-      <p class="placeholder">Nội dung trang sẽ được bổ sung sau. Header và Navigation đã sẵn sàng.</p>
+      <h1 class="page-title">Danh sách sản phẩm</h1>
+
+      <!-- Thanh tìm kiếm và lọc -->
+      <div class="toolbar">
+      <div class="toolbar__search">
+        <input
+          type="text"
+          id="searchInput"
+          class="toolbar__search-input"
+          placeholder="Tìm kiếm sản phẩm..."
+          aria-label="Tìm kiếm sản phẩm"
+        >
+      </div>
+
+      <div class="toolbar__filters">
+        <button class="filter-btn filter-btn--active" data-category="all">Tất cả</button>
+        <button class="filter-btn" data-category="dien-thoai">Điện thoại</button>
+        <button class="filter-btn" data-category="laptop">Laptop</button>
+        <button class="filter-btn" data-category="tablet">Tablet</button>
+        <button class="filter-btn" data-category="phu-kien">Phụ kiện</button>
+      </div>
+
+      <div class="toolbar__sort">
+        <select id="sortSelect" class="toolbar__sort-select" aria-label="Sắp xếp sản phẩm">
+          <option value="default">Sắp xếp</option>
+          <option value="price-asc">Giá tăng dần</option>
+          <option value="price-desc">Giá giảm dần</option>
+          <option value="name-asc">Tên A → Z</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Danh sách sản phẩm (render bằng JS) -->
+    <div class="product-grid" id="productGrid"></div>
     </div>
   </main>
 
   <script src="js/components/header.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/product-list.js"></script>
 </body>
 </html>

@@ -1,0 +1,38 @@
+{
+  // Tắt tất cả spell checker
+  "cSpell.enabled": false,
+  "spellright.enable": false,
+  "editor.wordBasedSuggestions": "off",
+  "editor.suggest.showWords": false,
+  
+  // Cấu hình cho Markdown - tắt hoàn toàn spell check
+  "[markdown]": {
+    "cSpell.enabled": false,
+    "spellright.enable": false,
+    "editor.wordBasedSuggestions": "off",
+    "editor.suggest.showWords": false,
+    "editor.quickSuggestions": {
+      "other": false,
+      "comments": false,
+      "strings": false
+    }
+  },
+  
+  // Cấu hình cho JavaScript/TypeScript - chỉ bật cho code
+  "[javascript]": {
+    "cSpell.enabled": true,
+    "cSpell.language": "en"
+  },
+  "[javascriptreact]": {
+    "cSpell.enabled": true,
+    "cSpell.language": "en"
+  },
+  "[typescript]": {
+    "cSpell.enabled": true,
+    "cSpell.language": "en"
+  },
+  "[typescriptreact]": {
+    "cSpell.enabled": true,
+    "cSpell.language": "en"
+  }
+}
