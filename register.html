@@ -1,57 +1,67 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng ký - E-BookStore</title>
-    <!-- Link đến file CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Đăng ký - TechStore</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components/header.css">
+    <link rel="stylesheet" href="assets/css/components/auth.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Tiêu đề -->
-        <h2 class="form-title">Đăng Ký Tài Khoản</h2>
-        <!-- Form đăng ký -->
-        <form action="#" method="POST">
-            <div class="form-group">
-                <label for="fullname">Họ và Tên</label>
-                <input type="text" id="fullname" name="fullname" placeholder="Nhập tên đầy đủ của bạn" required>
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="brand-logo">
+                <a href="index.html">TechStore</a>
             </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li><a href="login.html">Đăng Nhập</a></li>
+                <li><a href="register.html" class="active">Đăng Ký</a></li>
+            </ul>
+        </nav>
+    </header>
 
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Nhập email của bạn" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="password">Mật khẩu</label>
-                <input type="password" id="password" name="password" placeholder="Nhập mật khẩu (tối thiểu 6 ký tự)" minlength="6" required>
-            </div>
+    <div class="main-content">
+        <div class="container">
+            <h2 class="form-title">Đăng Ký Tài Khoản</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="fullname">Họ và Tên</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Nhập tên đầy đủ của bạn" required>
+                </div>
 
-            <div class="form-group">
-                <label for="confirm-password">Xác nhận mật khẩu</label>
-                <input type="password" id="confirm-password" name="confirm-password" placeholder="Nhập lại mật khẩu" required>
-            </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Nhập email của bạn" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Mật khẩu</label>
+                    <input type="password" id="password" name="password" placeholder="Nhập mật khẩu (tối thiểu 6 ký tự)" minlength="6" required>
+                </div>
 
-            <!-- Nút đăng ký -->
-            <button type="submit" class="btn-submit">Đăng Ký</button>
-            
-            <!-- Link chuyển sang trang đăng nhập -->
-            <p class="switch-link">
-                Đã có tài khoản? <a href="login.html">Đăng Nhập Ngay</a>
-            </p>
-        </form>
+                <div class="form-group">
+                    <label for="confirm-password">Xác nhận mật khẩu</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Nhập lại mật khẩu" required>
+                </div>
+
+                <button type="submit" class="btn-submit">Đăng Ký</button>
+                
+                <p class="switch-link">
+                    Đã có tài khoản? <a href="login.html">Đăng Nhập Ngay</a>
+                </p>
+            </form>
+        </div>
     </div>
 
-    <!-- Script nhỏ để validate password (tuỳ chọn) -->
     <script>
         document.querySelector('form').addEventListener('submit', function(e) {
             var password = document.getElementById('password').value;
             var confirm = document.getElementById('confirm-password').value;
-            
-            if (password !== confirm) {
+            if (password != confirm) {
                 e.preventDefault();
-                alert("Mật khẩu xác nhận không khớp!");
+                alert('Mật khẩu không khớp!');
             }
         });
     </script>
