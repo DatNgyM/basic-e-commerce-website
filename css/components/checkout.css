@@ -1,0 +1,102 @@
+.checkout-section {
+    max-width: 700px;
+    margin: 60px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-section h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: var(--primary-color-1);
+}
+
+.checkout-section > p {
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.form-group input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+    font-family: inherit;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color-1);
+    box-shadow: 0 0 5px rgba(102, 126, 234, 0.1);
+}
+
+.btn-order {
+    background: linear-gradient(135deg, var(--primary-color-1) 0%, var(--primary-color-2) 100%);
+    color: var(--text-color-light);
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-order:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.btn-order:active {
+    transform: translateY(0);
+}
+
+.checkout-links {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.checkout-links a {
+    color: var(--primary-color-1);
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.checkout-links a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .checkout-section {
+        margin: 30px auto;
+        padding: 20px;
+    }
+
+    .checkout-section h1 {
+        font-size: 1.5em;
+    }
+}
