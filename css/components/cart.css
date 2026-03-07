@@ -1,0 +1,55 @@
+/* Cart page - dùng biến từ main.css */
+.cart-container {
+  max-width: 600px;
+  margin: var(--space-8) auto;
+  border: 1px solid var(--color-border);
+  padding: var(--space-8);
+  border-radius: var(--radius-lg);
+  background: var(--color-white);
+  box-shadow: var(--shadow-sm);
+}
+
+.cart-container h2 {
+  margin-bottom: var(--space-6);
+  font-size: var(--font-size-xl);
+  color: var(--color-text);
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.cart-item:last-of-type {
+  border-bottom: none;
+}
+
+.cart-footer {
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.cart-footer .checkout-btn {
+  display: block;
+  text-align: center;
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+  padding: var(--space-3) var(--space-6);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: var(--font-weight-semibold);
+  margin-top: var(--space-4);
+  width: 100%;
+  transition: background var(--transition);
+  text-decoration: none;
+  font-size: var(--font-size-base);
+}
+
+.cart-footer .checkout-btn:hover {
+  background: var(--color-primary-dark);
+}
