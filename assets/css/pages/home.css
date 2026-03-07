@@ -1,0 +1,66 @@
+/* =========================================
+   HOME PAGE STYLES
+   ========================================= */
+
+.welcome-box {
+    background: var(--container-bg);
+    padding: 60px 40px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px var(--shadow-color);
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.welcome-box h1 {
+    color: var(--text-main);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.welcome-box p {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    text-decoration: none;
+    color: white;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.btn:hover {
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn-secondary {
+    background-color: #28a745;
+}
+
+.btn-secondary:hover {
+    background-color: #218838;
+}
